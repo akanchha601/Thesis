@@ -1,6 +1,6 @@
 # ML-DomainPhishingDetection
 
-                                                **Web API and Proof-of-Concept Web Application**
+## **Web API and Proof-of-Concept Web Application**
                                     
 Web API provides application interface to user over the internet. 
 It handles user request and returns output through web service. 
@@ -65,10 +65,9 @@ The flow chart of the framework is explained below:
 * Decision Tree classifier rules are employed to classify category of the domain.
 * The result shows that a domain was legitimate or phishing domain.
                                                             
-                                                       
-                                                             **Working**
+   ## **Working**
 
-Python version- 3.5
+Python version- 3.7
 Flask version- 1.1.1
 Operating system- Windows 10
 
