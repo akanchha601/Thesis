@@ -161,7 +161,7 @@ def daysValidity(inputDomain)
 	
 	
 #Classification Rules
-def decisionRules(feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,feature_7,feature_8,feature_9,feature_10,feature_11):
+def decisionRules(feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,feature_7,feature_8,feature_9,feature_10):
     output=None
     myDict = {'Is_domian_validated':feature_1,'Issuer_is_com':feature_9,'DaysValidity':feature_10,'Subject_is_com':feature_8
         ,'IssuerElements':feature_5,'Domain_ranking':feature_7,
@@ -170,31 +170,31 @@ def decisionRules(feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,fe
         output='Phishing Domain'
     elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==False and myDict['Subject_is_com']==True):
         output='Legitimate Domain'
-	elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==True and myDict['SubjectElements']<=5):
+    elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==True and myDict['SubjectElements']<=5):
         output='Phishing Domain'
-	elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==True and myDict['SubjectElements']>5):
+    elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==True and myDict['SubjectElements']>5):
         output='Legitimate Domain'
-	elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==False and myDict['Subject_is_com']==False and myDict['SubjectLength']<=66):
+    elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==False and myDict['Subject_is_com']==False and myDict['SubjectLength']<=66):
         output='Legitimate Domain'
-	elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==False and myDict['Subject_is_com']==False and myDict['SubjectLength']>66):
+    elif(myDict['Domain_ranking']<=42089 and myDict['Is_domian_validated']==False and myDict['IssuerHasState']==False and myDict['Subject_is_com']==False and myDict['SubjectLength']>66):
         output='Phishing Domain'
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==False):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==False):
         output='Phishing Domain'
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']<=3):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']<=3):
         output='Legitimate Domain'
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']>16):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']>16):
         output='Phishing Domain'
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']<=16 and myDict['DaysValidity']>735):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']<=16 and myDict['DaysValidity']>735):
         output='Legitimate Domain'	
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']<=16 and myDict['DaysValidity']<=735):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==False and myDict['IssuerElements']>3 and myDict['SubjectLength']<=16 and myDict['DaysValidity']<=735):
         output='Phishing Domain'
-	elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==True and myDict['ExtensionNumber']>10):
+    elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==True and myDict['ExtensionNumber']>10):
         output='Legitimate Domain'
     elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==True and myDict['ExtensionNumber']<=10 and myDict['Issuer_is_com']==False):
         output='Phishing Domain'
     elif(myDict['Is_domian_validated']==True and myDict['Subject_is_com']==True and myDict['IssuerHasState']==True and myDict['ExtensionNumber']<=10 and myDict['Issuer_is_com']==True):
         output='Phishing Domain'
-	else:
+    else:
         output='Please try again'
         
     return output
@@ -209,11 +209,11 @@ def background_process():
         else:
             domain=domainInput
             try:
-			    #calling certificate extection method
+            #calling certificate extection method
                 cert=readDomain(domain)
             except ValueError:
                 return jsonify(result='Please enter valid site name') 
-			#calling feature creation methods
+	    #calling feature creation methods
             feature_1=isdomainvalidated(domain)
             feature_2=issuerHasState(domain)
             feature_3,feature_4,feature_5,feature_6=subIsslength(domain)
@@ -221,7 +221,7 @@ def background_process():
             feature_8=subDotCom(domain)
             feature_9=issDotCom(domain)
             feature_10=daysValidity(domain)
-			#calling decision rules method
+	    #calling decision rules method
             decision_rule= decisionRules(feature_1,feature_2,feature_3,feature_4,feature_5,feature_6,feature_7,feature_8,feature_9,feature_10)
             return jsonify(result=decision_rule) 
     except Exception as e:
