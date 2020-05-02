@@ -25,7 +25,7 @@ The flow chart of this framework is below
 
 
 
-![Flow_chartAPI_new](/uploads/49158b8ad6339cb6c6955b562d6e1260/Flow_chartAPI_new.jpg)
+![Flow_chartAPI_new](https://user-images.githubusercontent.com/55644004/80871739-5c47c300-8c84-11ea-84ad-a797dfc46cbb.jpg)
                                
                                
                                
@@ -78,15 +78,15 @@ javascript, image and style files that are used for styling the web page of appl
 The api.html should be saved in templates folder and static files in static folder that are the requirements of flask in order to work.
 Below screenshots show the running server through web service:
 
-![example_of_legitimate_domain](/uploads/cbbcc52edc04507a37f5073ff86efa2f/example_of_legitimate_domain.png)
-![example_of_phishing_domain](/uploads/9a432848e2536ade70b30abce0478d7e/example_of_phishing_domain.png)
+![example of legitimate domain](https://user-images.githubusercontent.com/55644004/80871724-45a16c00-8c84-11ea-93d3-fda8c3035b73.png)
+![example of phishing domain](https://user-images.githubusercontent.com/55644004/80871717-3fab8b00-8c84-11ea-9a72-4770e3667fe8.png)
 
 
 The web application also returns an error message on wrong input data. 
 It shows error messages on screen when input request is empty or input data is other than domain name of the website.
 Below are examples of error messages.
-![example_of_error_case_1_copy](/uploads/efd57de4ae89ebbb498aeb3a720abc34/example_of_error_case_1_copy.png)
-![example_of_error_case_2](/uploads/2a86e5c0483195eef76c2dc9acb68b36/example_of_error_case_2.png)
+![example of error case 1_copy](https://user-images.githubusercontent.com/55644004/80871721-42a67b80-8c84-11ea-9915-34336685bf74.png)
+![example of error case 2](https://user-images.githubusercontent.com/55644004/80871723-43d7a880-8c84-11ea-992a-42e400733056.png)
 
 
 References
