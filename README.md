@@ -73,3 +73,16 @@ before issuing organization or extended validated certificates.
 provide enough time to fool internet users by showing encrypted traffic.
 4. Attackers tend to use the fake domains with self-signed certificates where they
 issue the SSL certificate to themselves by employing free SSL certificate tools.
+
+References
+1. Ssl - TLS/SSL wrapper for socket objects. (n.d.). Retrieved April 29, 2020, from https://docs.python.org/3/library/ssl.html
+2. Python One-liner to get your site's Alexa Rank. Retrieved April 29, 2020, from https://gist.github.com/masnun/3170870
+3. Cryptographic library.  http://openssl.cs.utah.edu/docs/crypto/crypto.html.
+4. Publicsuffix2.  https://pypi.org/project/publicsuffix2/.
+5. Explainwhatflaskisanditsbenefits?,Oct2019.https://www.i2tutorials.com/technology/explainwhatflaskisanditsbenefits/
+7. Flask – Templates. (n.d.). Retrieved May 06, 2020, from https://www.tutorialspoint.com/flask/flask_templates.htm
+8. Publicsuffix2.  https://pypi.org/project/publicsuffix2/.
+9. AJAX with jQuery. (n.d.). Retrieved May 06, 2020, from https://flask.palletsprojects.com/en/1.1.x/patterns/jquery/
+10. Installation. (n.d.). Retrieved May 06, 2020, from https://flask.palletsprojects.com/en/1.1.x/installation/
+11. Web API. (25 April 2020). Retrieved May 06, 2020, from https://en.wikipedia.org/wiki/Web_API
+12. Akanchha. (April 2020) "Exploring a robust machine learning classifier for detecting phishing domains using SSL certificates."
