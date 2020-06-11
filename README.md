@@ -58,17 +58,17 @@ test case performances of both decision trees, the robust classifier was explore
 respective features. As the dataset had only 160 data samples (80 legitimate and 80
 phishing domains), these results could be taken as preliminary but promising results
 in detecting the phishing domains.
-5.2 Key Findings
+# Key Findings
 Finally, on the basis of analyzed domains and certificates patterns between legitimate
 and phishing classes, I observe the following:
-• Attackers use free certificates issued by CA such as “Let’s Encrypt Authority
+1. Attackers use free certificates issued by CA such as “Let’s Encrypt Authority
 X3”, “cPanel, Inc. Certification Authority”. However, these free web certificates are available mainly for start-up companies who can not afford expensive
 SSL certificate but attackers use these methods for phishing purposes.
-• Attackers use domain validated and wild card certificates. They do not seem to
+2. Attackers use domain validated and wild card certificates. They do not seem to
 purchase organization or extended validated certificates as it may disclose their
 actual purposes and personal details. CA strictly verifies provided information
 before issuing organization or extended validated certificates.
-• Attackers seem to use SSL certificates that are valid for only 90 days. These
+3. Attackers seem to use SSL certificates that are valid for only 90 days. These
 provide enough time to fool internet users by showing encrypted traffic.
-• Attackers tend to use the fake domains with self-signed certificates where they
+4. Attackers tend to use the fake domains with self-signed certificates where they
 issue the SSL certificate to themselves by employing free SSL certificate tools.
