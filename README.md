@@ -43,6 +43,8 @@ features. The obtained results for Without text features decision model performe
 well in almost every case for both classes as compared to With text features. Thus,
 Without text features decision model was proposed to classify legitimate and phishing
 domains.
+The architecture of the proposed system is provided below:
+![Architecture3](https://user-images.githubusercontent.com/55644004/84404986-85d60180-abd5-11ea-9ee3-2ddfd7785a27.png)
 As per my knowledge, this is first effort towards analyzing the classifier robustness of the trained models with different features. With these evaluations, it was
 easy to estimate the effectiveness and consistency of the classifiers if the attackers
 changed their patterns in phishing. With decision tree classifier, the hidden patterns
